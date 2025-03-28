@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="header">
+        <h1>Exam</h1>
+        <div class="score-info">
+            <p><strong>Genel En Yüksek Puan:</strong> {{ highest_overall }}%</p>
+            <p><strong>Kendi En Yüksek Puanınız:</strong> {{ user_highest_score }}%</p>
+        </div>
+    </div>
+
+    <form method="POST" action="/submit">
+        <div class="question-block">
+            <h2>Python ile sohbet botu otomasyonu (Discord.py)</h2>
+            <label>Discord.py ile bot oluşturmak için hangi kütüphane kullanılır?</label><br>
+            <input type="radio" name="q1" value="discord.py"> discord.py<br>
+            <input type="radio" name="q1" value="flask"> flask<br>
+            <input type="radio" name="q1" value="tensorflow"> tensorflow<br><br>
+        </div>
+
+        <div class="question-block">
+            <h2>Python ile web geliştirme (Flask)</h2>
+            <label>Flask hangi programlama diliyle yazılmıştır?</label><br>
+            <input type="radio" name="q2" value="python"> python<br>
+            <input type="radio" name="q2" value="javascript"> javascript<br>
+            <input type="radio" name="q2" value="java"> java<br><br>
+        </div>
+
+        <div class="question-block">
+            <h2>Python ile yapay zeka geliştirme</h2>
+            <label>TensorFlow hangi alanda kullanılan bir kütüphanedir?</label><br>
+            <input type="radio" name="q3" value="bilgisayar görüşü"> bilgisayar görüşü<br>
+            <input type="radio" name="q3" value="web geliştirme"> web geliştirme<br>
+            <input type="radio" name="q3" value="oyun geliştirme"> oyun geliştirme<br><br>
+        </div>
+
+        <div class="question-block">
+            <h2>Bilgisayar Görüşü (TensorFlow, ImageAI)</h2>
+            <label>ImageAI kütüphanesi hangi dilde yazılmıştır?</label><br>
+            <input type="radio" name="q4" value="python"> python<br>
+            <input type="radio" name="q4" value="javascript"> javascript<br>
+            <input type="radio" name="q4" value="c++"> c++<br><br>
+        </div>
+
+        <div class="question-block">
+            <h2>Doğal Dil İşleme (BeautifulSoup, NLTK)</h2>
+            <label>BeautifulSoup hangi işlevi yerine getirir?</label><br>
+            <input type="radio" name="q5" value="web scraping"> web scraping<br>
+            <input type="radio" name="q5" value="görüntü işleme"> görüntü işleme<br>
+            <input type="radio" name="q5" value="ses tanıma"> ses tanıma<br><br>
+        </div>
+
+        <button type="submit" class="submit-button">Gönder</button>
+    </form>
+{% endblock %}

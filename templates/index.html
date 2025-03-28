@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .form-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .form-box h1 {
+            margin-bottom: 20px;
+        }
+        .form-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .form-box input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-box button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-box button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h1>Quiz Uygulaması</h1>
+            <form method="POST" action="/">
+                <label>Kullanıcı Adı:</label>
+                <input type="text" name="username" required>
+                <button type="submit">Başla</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
